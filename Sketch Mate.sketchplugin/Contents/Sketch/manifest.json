@@ -3,10 +3,10 @@
   "description": "These plugins will make you best friends with Sketch",
   "author": "Florian Schulz",
   "homepage": "https://github.com/getflourish/Sketch-Mate",
-  "version": 1.0,
+  "version": 1.1,
   "identifier": "com.getflourish.sketch.mate",
   "updateURL": "https://github.com/downloads/example/sketchplugins/sketchplugins.json",
-  "compatibleVersion": 3.3,
+  "compatibleVersion": 3.6,
   "bundleVersion": 1,
   "commands": [
 
@@ -36,9 +36,22 @@
     },
     {
       "name": "Sort Artboards by Position",
-      "identifier": "com.getflourish.mate.artboards.sortByPosition",
+      "identifier": "com.getflourish.mate.sort.sortArtboardsByPosition",
       "shortcut": "",
-      "script": "Artboards/Sort Artboards by Position.js"
+      "script": "Sort/Sort Artboards by Position.js"
+    },
+    {
+      "name": "Sort Artboards by Name",
+      "identifier": "com.getflourish.mate.sort.sortArtboardsByName",
+      "shortcut": "",
+      "script": "Sort/Sort Artboards by Name.js"
+    },
+
+    {
+      "name": "Sort Layers",
+      "identifier": "com.getflourish.mate.sort.sortLayers",
+      "shortcut": "ctrl option command s",
+      "script": "Sort/Sort Layers.js"
     },
 
     {
@@ -81,8 +94,14 @@
     {
       "name": "Select Artboard(s)",
       "identifier": "com.getflourish.mate.select.artboards",
-      "shortcut": "shift cmd a",
+      "shortcut": "ctrl cmd a",
       "script": "Select/Select Artboard(s).js"
+    },
+    {
+      "name": "Select Below",
+      "identifier": "com.getflourish.mate.select.below",
+      "shortcut": "shift cmd b",
+      "script": "Select/Select Below.js"
     },
     {
       "name": "Select Group Layers",
@@ -109,10 +128,16 @@
       "script": "Smart Align/Distribute Vertically.js"
     },
     {
-      "name": "Stretch",
-      "identifier": "com.getflourish.mate.smartAlign.stretch",
+      "name": "Stretch Width",
+      "identifier": "com.getflourish.mate.smartAlign.stretchWidth",
       "shortcut": "cmd e",
-      "script": "Smart Align/Stretch.js"
+      "script": "Smart Align/Stretch Width.js"
+    },
+    {
+      "name": "Stretch Height",
+      "identifier": "com.getflourish.mate.smartAlign.stretchHeight",
+      "shortcut": "cmd option e",
+      "script": "Smart Align/Stretch Height.js"
     },
     {
       "name": "Smart Align Bottom",
@@ -163,7 +188,7 @@
       "script": "Smart Align/Space Vertically.js"
     },
     {
-      "name": "Delete and Pull [broken]",
+      "name": "Delete and Pull",
       "identifier": "com.getflourish.mate.smartMove.deleteAndPull",
       "shortcut": "cmd ⌫",
       "script": "Smart Move/Delete and Pull.js"
@@ -197,6 +222,18 @@
       "identifier": "com.getflourish.mate.smartMove.setIncrements",
       "shortcut": "shift cmd option i",
       "script": "Smart Move/Set Increments.js"
+    },
+    {
+      "name": "Reverse Layer Order",
+      "identifier": "com.getflourish.mate.sort.reverseLayerOrder",
+      "shortcut": "",
+      "script": "Sort/Reverse Layer Order.js"
+    },
+    {
+      "name": "Reverse Positions",
+      "identifier": "com.getflourish.mate.sort.reversePositions",
+      "shortcut": "",
+      "script": "Sort/Reverse Positions.js"
     }
 
   ],
@@ -209,7 +246,6 @@
                 "com.getflourish.mate.artboards.fitArtboardHeight",
                 "com.getflourish.mate.artboards.fitArtboard",
                 "com.getflourish.mate.artboards.remove",
-                "com.getflourish.mate.artboards.sortByPosition"
             ]
         },
         {
@@ -227,6 +263,7 @@
            "title": "Select",
            "items": [
                 "com.getflourish.mate.select.artboards",
+                "com.getflourish.mate.select.below",
                 "com.getflourish.mate.select.groupLayers",
                 "com.getflourish.mate.select.parentGroup"
             ]
@@ -244,7 +281,8 @@
                 "com.getflourish.mate.smartAlign.vertically",
                 "com.getflourish.mate.smartAlign.spaceHorizontally",
                 "com.getflourish.mate.smartAlign.spaceVertically",
-                "com.getflourish.mate.smartAlign.stretch"
+                "com.getflourish.mate.smartAlign.stretchWidth",
+                "com.getflourish.mate.smartAlign.stretchHeight"
             ]
         },
         {
@@ -256,6 +294,16 @@
                 "com.getflourish.mate.smartMove.pullUp",
                 "com.getflourish.mate.smartMove.pushDown",
                 "com.getflourish.mate.smartMove.setIncrements"
+            ]
+        },
+        {
+           "title": "Sort",
+           "items": [
+                "com.getflourish.mate.sort.reverseLayerOrder",
+                "com.getflourish.mate.sort.reversePositions",
+                "com.getflourish.mate.sort.sortArtboardsByName",
+                "com.getflourish.mate.sort.sortArtboardsByPosition",
+                "com.getflourish.mate.sort.sortLayers"
             ]
         }
     ]
